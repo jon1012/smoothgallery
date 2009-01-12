@@ -205,6 +205,8 @@ var gallery = {
 	},
 	constructElements: function() {
 		el = this.galleryElement;
+		if (this.options.embedLinks && (!this.options.showArrows))
+			el = this.currentLink;
 		this.maxIter = this.galleryData.length;
 		var currentImg;
 		for(i=0;i<this.galleryData.length;i++)
